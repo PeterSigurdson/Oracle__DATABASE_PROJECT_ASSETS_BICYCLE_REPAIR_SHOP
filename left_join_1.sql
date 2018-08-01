@@ -1,8 +1,9 @@
-create table  BC_OUTPUT_A
+create table  BC_OUTPUT_E
 AS ( 
-select bc_customers.cellphone, bc_customers.city, bc_customers.occupation, 
-bc_purchase_records.purchase_price, bc_purchase_records.bike_id, 
-bc_repair_data.date_in, bc_repair_data.charge, bc_repair_data.bike_id 
+select bc_customers.cellphone as custid, bc_customers.name as custname, bc_customers.city as custcity, 
+bc_customers.occupation as job, bc_purchase_records.purchase_price as purchase_price, 
+bc_purchase_records.bike_id as purchase_bike,  
+bc_repair_data.date_in as repair_date_in, bc_repair_data.charge as repair_charge 
 
 from bc_customers
 
